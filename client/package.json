@@ -1,0 +1,12 @@
+{
+  "name": "electric-world",
+  "uuid": "ee3bc9d0-b44c-4a0b-be9d-d0e82156ffd8",
+  "creator": {
+    "version": "3.8.6"
+  },
+  "dependencies": {
+    "@esengine/ecs-framework": "^2.1.31",
+    "@esengine/ecs-framework-math": "^1.0.5",
+    "@esengine/ecs-framework-network": "^1.0.4"
+  }
+}
