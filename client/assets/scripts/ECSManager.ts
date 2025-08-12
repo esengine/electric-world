@@ -29,7 +29,8 @@ export class ECSManager extends Component {
             
             // 创建游戏场景
             const gameScene = new ElectricWorldScene();
-            Core.scene = gameScene;
+            // Core.scene = gameScene;
+            Core.setScene(gameScene);
             
             this.isInitialized = true;
             console.log('ECS框架初始化成功');

@@ -1,21 +1,18 @@
 import { Scene } from '@esengine/ecs-framework';
 import { ElectricWorldClient } from '../network/ElectricWorldClient';
 
-// 使用 WeakMap 来存储网络客户端，避免类属性问题
-const networkClientMap = new WeakMap<ElectricWorldScene, ElectricWorldClient>();
-
 /**
  * Electric World游戏场景
  */
 export class ElectricWorldScene extends Scene {
+    private _networkClient!: ElectricWorldClient;
     
     public get networkClient(): ElectricWorldClient {
-        const client = networkClientMap.get(this);
-        return client!;
+        return this._networkClient;
     }
     
     public set networkClient(value: ElectricWorldClient) {
-        networkClientMap.set(this, value);
+        this._networkClient = value;
     }
     
     /**

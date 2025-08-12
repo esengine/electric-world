@@ -33,7 +33,7 @@ export class ECSCore {
             
             // 创建服务端场景
             const serverScene = new ServerScene();
-            Core.scene = serverScene;
+            Core.setScene(serverScene);
             
             this.isInitialized = true;
             this.lastUpdateTime = Date.now();
